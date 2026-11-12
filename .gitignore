@@ -1,0 +1,77 @@
+# ============================================
+# AMBIENTE E CONFIGURAÇÕES
+# ============================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+secrets.toml
+config.json
+
+# ============================================
+# DEPENDÊNCIAS
+# ============================================
+node_modules/
+venv/
+.venv/
+env/
+
+# ============================================
+# BUILDS E CACHE
+# ============================================
+.next/
+out/
+dist/
+build/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ============================================
+# MODELOS DE ML (MUITO GRANDES)
+# ============================================
+models/
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# ============================================
+# LOGS E TEMPORÁRIOS
+# ============================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+
+# ============================================
+# IDEs E EDITORES
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ============================================
+# DADOS LOCAIS
+# ============================================
+data/
+*.csv
+*.json
+!package.json
+!package-lock.json
+
+# ============================================
+# RESULTADOS DE TREINAMENTO
+# ============================================
+results/
+logs/
+checkpoints/
+runs/

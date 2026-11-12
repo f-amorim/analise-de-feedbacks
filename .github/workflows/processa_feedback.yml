@@ -1,0 +1,26 @@
+name: Processar Feedbacks PLN
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'  # A cada 2 horas
+  workflow_dispatch:  # Rodar manualmente
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+      
+      - name: Processar feedbacks
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          HF_MODEL_NAME: ${{ secrets.HF_MODEL_NAME }}
+        run: python scripts/processar_feedback.py
