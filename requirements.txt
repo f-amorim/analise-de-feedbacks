@@ -1,3 +1,3 @@
 supabase==2.33.0
-transformers==4.46.0
-torch==5.22.2
+transformers==5.22.2
+torch==2.15.0
