@@ -23,4 +23,4 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
           HF_MODEL_NAME: ${{ secrets.HF_MODEL_NAME }}
-        run: python scripts/processar_feedback.py
+        run: python scripts/processar_feedbacks.py
